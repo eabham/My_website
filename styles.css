@@ -22,10 +22,8 @@ header {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-/* Profile Image */
 .profile-pic {
     width: 80px;
     height: 80px;
@@ -35,14 +33,12 @@ header {
     margin-right: 15px;
 }
 
-/* Navigation Bar */
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -63,25 +59,25 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Fix Content Overlapping Navbar */
+/* Section Styling */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px; /* Adjusted to ensure content isn't hidden */
+    padding-top: 80px;
 }
 
-/* Section Styling */
 section {
     width: 100%;
     max-width: 900px;
     padding: 60px 10%;
     text-align: left;
+    border-bottom: none;
+    margin-bottom: 40px;
     background: #111;
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-    margin-bottom: 40px;
 }
 
 h2 {
@@ -93,7 +89,6 @@ h2 {
     text-align: center;
 }
 
-/* Experience, Projects, and Skills Items */
 .experience-item, .project-item, .skills-item {
     display: flex;
     align-items: center;
@@ -102,7 +97,6 @@ h2 {
     flex-direction: column;
 }
 
-/* Images */
 .experience-img, .project-img {
     width: 150px;
     height: 100px;
@@ -111,7 +105,6 @@ h2 {
     border: 2px solid #fff;
 }
 
-/* List Styling */
 ul.bullet-list {
     list-style-type: square;
     padding-left: 20px;
@@ -170,51 +163,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-    /* Adjust header */
-    header {
-        flex-direction: column; /* Stack elements vertically */
-        text-align: center;
-        padding: 10px; /* Reduce padding */
-    }
-
-    .profile-pic {
-        width: 60px; /* Smaller image */
-        height: 60px;
-        margin-right: 0; /* Center profile pic */
-    }
-
-    /* Stack navigation links */
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav ul li {
-        display: block;
-    }
-
-    nav ul li a {
-        font-size: 0.9rem;
-        padding: 5px;
-    }
-
-    /* Adjust container padding so content is not hidden under navbar */
-    .container {
-        padding-top: 120px;
-    }
-
-    /* Ensure images scale properly */
-    .experience-img, .project-img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Reduce section padding */
-    section, #skills {
-        padding: 30px 5%;
-    }
 }
