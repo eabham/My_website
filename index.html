@@ -3,36 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Eabha Murphy</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Personal Website</h1>
+        <img src="images\profile.pic.png" alt="Eabha Murphy" class="profile-pic">
+        <h1 class="glow">Eabha Murphy</h1>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">👤 About Me</a></li>
+                <li><a href="#projects">🚀 Projects</a></li>
+                <li><a href="#experience">💼 Experience</a></li>
+                <li><a href="#skills">🛠 Skills</a></li>
+                <li><a href="#hobbies">⭐ Hobbies</a></li>
+                <li><a href="#awards">🏆 Awards</a></li>
             </ul>
         </nav>
     </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi! I'm [Your Name], and this is my personal website.</p>
-    </section>
-
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Here are some of my projects.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email me at: [your email]</p>
-    </section>
-
+    
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi! I'm Eabha, and I am a fourth-year biomedical engineering student with a keen interest in technology and robotics.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul class="bullet-list">
+                <li>
+                    <strong> 🤖 Formula Trinity Autonomous</strong>
+                    <p> Lead the State Estimation team in the development of an algorithm for the localisation and mapping of an autonomous vehicle to compete in Formula Student AI. Presented a high level overview of the system with teammates, winning best design presentation.</p>
+                    <img src="images\design_pres.png" alt="Photography" class="experience-img">
+                    <img src="images\autonomous.png" alt="Photography" class="experience-img">
+                    <img src="images\car.png" alt="Photography" class="experience-img">
+                </li>
+                <li>
+                    <strong> 💉 Easedrops</strong>
+                    <p> Developed a prototype of a medical device with a team of 5 to aid blood flow to the finger. Check out our <a href="https://easedrops.weebly.com/" target="_blank">website</a>.
+                     </p>
+                </li>
+               
+                
+            </ul>
+        </section>
+        <section id="experience">
+            <h2>Experience </h2>
+            <ul class="bullet-list">
+                <li>
+                    <strong> ⚙️ R&D Mechanical Engineer </strong>
+                    <p>Currently working at a medical device startup as part of my co-op as R&D engineer. Using Python and Plotly for development of an algorithm for data analysis.</p>
+                </li>
+                <li>
+                    <strong> 💻 Technology Consultant </strong>
+                    <p>Worked on a project management team for a large server migration.</p>
+                </li>
+                <li>
+                    <strong> 🦷 Dental Receptionist </strong>
+                    <p>I have worked part-time as a dental receptionist since I was 15.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="bullet-list">
+                <li>
+                    <strong> ⭐ Programming</strong> 
+                    <p>MATLAB, C++, Python</p>
+                </li>
+                <li>
+                    <strong> ⭐ Software</strong> 
+                    <p>SolidWorks, AutoCAD, Microsoft Suite, Exact Dental, LaTeX</p>
+                </li>
+                <li>
+                    <strong> ⭐ Problem-solving, data analysis, and report writing</strong>
+                </li>
+            </ul>
+        </section>
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>When I'm not working, I enjoy:</p>
+            <ul class="bullet-list">
+                <li>
+                    <p>🏃‍♂️ Running </p>
+                </li>
+                <li>
+                    <p>🎨 Art</p>
+                    <img src="images\EY.png" alt="Photography" class="experience-img">
+                </li>
+                <li>
+                    <p> 📚 Reading</p>
+                </li>
+            </ul>
+        </section>
+        <section id="awards">
+            <h2>Awards & Achievements</h2>
+            <p>Here are some of the recognitions I’ve received:</p>
+            <ul class="bullet-list">
+                <li>
+                    <p>🥇 FSAI Tata Elxsi Autonomous Engineering Design Presentation Winner (2024) </p>
+                </li>
+                <li>
+                    <p>🏆 IMechE & Engineers Ireland Engineering group project competition, second prize</p>
+                </li>
+                <li>
+                    <p>🥇 EY Sustainability Project Finalist (2023)  </p>
+                </li>
+                <li>
+                    <p>🏆 Bronze Cybersecurity EY Badge (2023) </p>
+                </li>
+                <li>
+                    <p>🥇 Naughton Scholarship (2021) </p>
+                </li>
+                <li>
+                    <p>🏆 TCD Entrance Exhibition award (2021)  </p>
+                </li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Eabha Murphy | Connect with me on <a href="https://www.linkedin.com/in/eabha-murphy/">LinkedIn</a></p>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
