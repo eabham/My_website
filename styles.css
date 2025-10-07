@@ -12,7 +12,7 @@ body {
 header {
     background: #111;
     color: #fff;
-    padding: 12px;
+    padding: 10px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -20,17 +20,31 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: nowrap; /* ✅ keep horizontal layout */
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;              /* ✅ allow horizontal scroll if needed */
+    white-space: nowrap;           /* ✅ prevent wrapping */
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+}
+
+header::-webkit-scrollbar {
+    display: none;                 /* ✅ hides scrollbar on mobile */
 }
 
 .profile-pic {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid white;
+    flex-shrink: 0;
+}
+
+header h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    white-space: nowrap;
 }
 
 /* === Navigation === */
@@ -38,9 +52,9 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 12px;
     margin: 0;
+    flex-shrink: 0;
 }
 
 nav ul li {
@@ -50,8 +64,8 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
-    padding: 10px 12px;
+    font-size: 0.85rem;
+    padding: 6px 8px;
     display: block;
     transition: 0.3s ease-in-out;
     font-weight: bold;
@@ -67,7 +81,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 110px; /* space for fixed header */
+    padding-top: 100px; /* space for fixed header */
 }
 
 /* === Section Styling === */
@@ -80,7 +94,7 @@ section {
     border-radius: 10px;
     margin-bottom: 40px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-    scroll-margin-top: 130px; /* fix scroll offset */
+    scroll-margin-top: 120px; /* ✅ prevents header overlap when jumping to anchor */
 }
 
 h2 {
@@ -122,7 +136,7 @@ ul.bullet-list li {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
     margin-bottom: 40px;
-    scroll-margin-top: 130px;
+    scroll-margin-top: 120px;
 }
 
 #skills h2 {
@@ -169,8 +183,8 @@ footer a:hover {
   }
 
   header {
-    gap: 8px;
-    padding: 8px;
+    gap: 6px;
+    padding: 6px 8px;
   }
 
   .profile-pic {
@@ -179,23 +193,22 @@ footer a:hover {
   }
 
   header h1 {
-    font-size: 1rem;
-    margin: 0;
+    font-size: 0.9rem;
   }
 
   nav ul {
-    gap: 8px;
+    gap: 6px;
   }
 
   nav ul li a {
-    font-size: 0.75rem; /* smaller text on mobile */
+    font-size: 0.7rem;
     padding: 4px 6px;
   }
 
   section {
     padding: 20px;
     margin: 15px 10px;
-    scroll-margin-top: 110px;
+    scroll-margin-top: 100px;
   }
 
   .container {
