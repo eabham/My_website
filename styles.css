@@ -22,6 +22,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .profile-pic {
@@ -51,7 +52,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    padding: 12px 16px; /* larger tap area for mobile */
+    padding: 12px 16px; /* bigger tap area */
     display: block;
     transition: 0.3s ease-in-out;
     font-weight: bold;
@@ -62,12 +63,12 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* === Main Container === */
+/* === Container === */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px; /* space for fixed header */
+    padding-top: 120px; /* space for fixed header */
 }
 
 /* === Section Styling === */
@@ -80,6 +81,7 @@ section {
     border-radius: 10px;
     margin-bottom: 40px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    scroll-margin-top: 140px; /* ✅ fixes "scroll too low" issue */
 }
 
 h2 {
@@ -121,6 +123,7 @@ ul.bullet-list li {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
     margin-bottom: 40px;
+    scroll-margin-top: 140px; /* ✅ same offset fix */
 }
 
 #skills h2 {
@@ -163,17 +166,42 @@ footer a:hover {
 /* === Mobile-Friendly Adjustments === */
 @media (max-width: 768px) {
   body {
-    padding-top: 120px; /* prevent overlap with fixed header */
+    padding-top: 100px;
+  }
+
+  /* Stack header vertically on phones */
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .profile-pic {
+    width: 60px;
+    height: 60px;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    margin: 5px 0;
   }
 
   nav ul {
     flex-direction: column;
     align-items: center;
+    gap: 5px;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
   }
 
   section {
     padding: 20px;
-    margin: 20px 10px;
+    margin: 15px 10px;
+    scroll-margin-top: 120px; /* adjusts anchor offset for smaller header */
   }
 
   .container {
